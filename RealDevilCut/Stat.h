@@ -14,4 +14,7 @@ struct Stat {
 	int exp;
 };
 
+extern int exp_cap[10];
+
 Stat makeStat(string fileName);
+void printStat(Stat stat);
