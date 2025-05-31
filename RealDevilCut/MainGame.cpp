@@ -1,6 +1,8 @@
 #include <iostream>
 #include <Windows.h>
 #include <conio.h>
+#include <ios>
+#include <limits>
 #include "Stat.h"
 using namespace std;
 
@@ -35,7 +37,19 @@ void battle(Stat monster) {
 		cout << "방어력: " << player.def << endl;
 		cout << "스피드: " << player.spd << endl << endl;
 		cout << "1. 공격\n2. 도망가기" << endl;
-		cin >> playerSelect;
+
+		while (true) {
+			cin >> playerSelect;
+
+			if (cin) {
+				break;
+			}
+			else {
+				cin.clear();
+				cin.ignore(1000, '\n');
+			}
+		}
+
 		switch (playerSelect) {
 		case 1:
 			if (player.spd == monster.spd) {
@@ -76,6 +90,7 @@ void battle(Stat monster) {
 						player.exp -= exp_cap[player.level - 1];
 						player.level += 1;
 					}
+					return;
 				}
 			}
 			break;
@@ -104,7 +119,18 @@ void village() {
 	cout << "마을에 들어가볼까?" << endl << endl;
 	_getch();
 	cout << "1. 들어간다" << endl << "2. 들어가지 않는다" << endl;
-	cin >> villageSwitch;
+
+	while (true) {
+		cin >> villageSwitch;
+
+		if (cin) {
+			break;
+		}
+		else {
+			cin.clear();
+			cin.ignore(1000, '\n');
+		}
+	}
 
 	switch (villageSwitch) {
 	case 1:
@@ -128,7 +154,18 @@ void village() {
 			cout << "2. 특제 방어구 세트 (50G)" << endl << "방어력 + 3" << endl << endl;
 			cout << "3. 특제 신발 (30G)" << endl << "스피드 + 3" << endl << endl;
 			cout << "4. 구매 종료" << endl;
-			cin >> sellSelect;
+
+			while (true) {
+				cin >> sellSelect;
+
+				if (cin) {
+					break;
+				}
+				else {
+					cin.clear();
+					cin.ignore(1000, '\n');
+				}
+			}
 
 			switch (sellSelect) {
 			case 1:
@@ -175,7 +212,19 @@ void village() {
 		cout << "마을을 잠시 돌아다니다보니 마을 중심가에 자리잡은 여관이 보였다." << endl;
 		cout << "아무래도 오늘은 저 곳에서 묵는 것이 좋을 것 같다." << endl << endl;
 		cout << "1. 묵고 간다\n2. 갈 길이 바쁘다. 빠르게 마을을 벗어나자." << endl;
-		cin >> sleepSelect;
+
+		while (true) {
+			cin >> sleepSelect;
+
+			if (cin) {
+				break;
+			}
+			else {
+				cin.clear();
+				cin.ignore(1000, '\n');
+			}
+		}
+
 		system("cls");
 		switch (sleepSelect) {
 		case 1:
@@ -255,7 +304,19 @@ int main() {
 		cout << "1. 여행을 계속한다" << endl;
 		cout << "2. 내 능력치를 본다" << endl;
 		cout << "3. 여행을 마친다" << endl;
-		cin >> playerSelect;
+
+		while (true) {
+			cin >> playerSelect;
+
+			if (cin) {
+				break;
+			}
+			else {
+				cin.clear();
+				cin.ignore(1000, '\n');
+			}
+		}
+
 		system("cls");
 
 		int randomSwitch = rand() % 4;
