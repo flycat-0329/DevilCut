@@ -332,6 +332,31 @@ int main() {
 				cout << endl << "죽어라!!" << endl;
 				_getch();
 				battle(makeStat("bossStat.txt"));
+				system("cls");
+				cout << "악마를 쓰러뜨린 당신은 지금껏 지나온 길을 다시 돌아와 한 무덤 앞에 섰습니다." << endl;
+				_getch();
+				cout << "아저씨, 드디어 끝났어." << endl;
+				_getch();
+				cout << "음... 생각한것만큼 그리 기분이 좋진 않네." << endl;
+				_getch();
+				cout << "이제 어떻게 살아가야 할지는 고민을 좀 해봐야겠어." << endl;
+				_getch();
+				cout << "한번 싸워보니까 알겠더라고. 악마 사냥꾼 같은건 역시 아저씨가 말한대로 할 짓이 못 돼." << endl;
+				_getch();
+				cout << endl << "..." << endl;
+				_getch();
+				cout << "...아저씨 나 있잖아. 정말 복수를 한게 맞는걸까." << endl;
+				_getch();
+				cout << "분명 그 녀석을 죽였는데 막 속이 후련하고 그렇지는 않네" << endl;
+				_getch();
+				cout << "아~ 모르겠다~ 일단 한 숨 자고 생각해볼래" << endl;
+				_getch();
+				cout << "그럼 잘 있어, 아저씨. 나중에 다시 올게!" << endl << endl;
+				_getch();
+				cout << "Devil Hunter Adventure" << endl;
+				cout << "     ~ The End ~      " << endl;
+				_getch();
+				exit(0);
 			}
 
 			switch (randomSwitch) {
